@@ -1,0 +1,6 @@
+dependencies:
+- name: zap-automation-framework
+  repository: oci://ghcr.io/securecodebox/helm
+  version: 4.6.0
+digest: sha256:19549f9ff21c0fb92d250b2d9537f9fd3a8929e1fb9b4df00b753f1737485309
+generated: "2024-07-29T04:04:10.063530451Z"

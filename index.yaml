@@ -1,0 +1,32 @@
+apiVersion: v1
+entries:
+  zap-automation-framework:
+  - annotations:
+      supported-platforms: linux/amd64,linux/arm64
+      versionApi: https://api.github.com/repos/zaproxy/zaproxy/releases/latest
+    apiVersion: v2
+    appVersion: 2.14.0
+    created: "2024-07-31T16:07:17.684326+08:00"
+    description: A Helm chart for the ZAP Automation Framework that integrates with
+      the secureCodeBox.
+    digest: 0bba256bdb9c3d10c2249db187411117e1b48139aee2009fddedf843a31b1335
+    home: https://www.securecodebox.io/docs/scanners/ZAP
+    icon: https://www.securecodebox.io/img/integrationIcons/ZAP.svg
+    keywords:
+    - security
+    - Zap
+    - OWASP
+    - scanner
+    - secureCodeBox
+    kubeVersion: '>=v1.11.0-0'
+    maintainers:
+    - email: secureCodeBox@iteratec.com
+      name: iteratec GmbH
+    name: zap-automation-framework
+    sources:
+    - https://github.com/secureCodeBox/secureCodeBox
+    type: application
+    urls:
+    - https://github.com/lauhong28/zap-automation-framework/zap-automation-framework-4.6.0.tgz
+    version: 4.6.0
+generated: "2024-07-31T16:07:17.6792493+08:00"

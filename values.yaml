@@ -1,0 +1,6 @@
+# check https://github.com/openfga/helm-charts/blob/main/charts/openfga/values.yaml
+
+# Allows you to define arbitrary manifest files to deploy in addition to the regular helm chart deployment
+
+extraObjects: []
+###
