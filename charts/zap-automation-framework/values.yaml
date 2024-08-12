@@ -30,8 +30,9 @@ parser:
         verification:
           method: "response"
           pollFrequency: 60
-       sessionManagement:
-         method: "cookie"
+          pollUnits: "requests"
+      sessionManagement:
+        method: "cookie"
     parameters: {}
        technology:
          exclude: []
