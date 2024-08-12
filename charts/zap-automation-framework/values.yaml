@@ -33,9 +33,9 @@ parser:
           pollUnits: "requests"
       sessionManagement:
         method: "cookie"
-    parameters: {}
-       technology:
-         exclude: []
+        parameters: {}
+      technology:
+        exclude: []
   parameters:
     failOnError: true
     failOnWarning: false
