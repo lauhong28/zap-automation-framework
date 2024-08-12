@@ -30,7 +30,6 @@ parser:
         verification:
           method: "response"
           pollFrequency: 60
-
        sessionManagement:
          method: "cookie"
     parameters: {}
