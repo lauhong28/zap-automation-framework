@@ -30,6 +30,7 @@ spec:
               command:
                 - "zap.sh"
                 - "-cmd"
+                - "-autorun"
               resources:
                 {{- toYaml .Values.scanner.resources | nindent 16 }}
               securityContext:
