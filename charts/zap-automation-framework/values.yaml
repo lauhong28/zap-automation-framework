@@ -96,7 +96,7 @@ scanner:
     spec:
       containers:
         - name: busybox
-          image: busybox
+          image: softwaresecurityproject/zap-stable
           command: ["sleep", "3600"]  # Keep the Pod running for 1 hour
 
   # scanner.podSecurityContext -- Optional securityContext set on scanner pod (see: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
