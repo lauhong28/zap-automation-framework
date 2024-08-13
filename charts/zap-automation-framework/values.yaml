@@ -37,6 +37,9 @@ parser:
   resources: {}
 
 scanner:
+  annotations:
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+    argocd.argoproj.io/hook: Sync
   image:
     # scanner.image.repository -- Container Image to run the scan
     repository: softwaresecurityproject/zap-stable
