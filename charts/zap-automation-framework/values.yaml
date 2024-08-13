@@ -88,7 +88,16 @@ scanner:
       name: zap-automation
 
   # scanner.extraContainers -- Optional additional Containers started with each scanJob (see: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
-  extraContainers: []
+  extraContainers: 
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: busybox
+    spec:
+      containers:
+        - name: busybox
+          image: busybox
+          command: ["sleep", "3600"]  # Keep the Pod running for 1 hour
 
   # scanner.podSecurityContext -- Optional securityContext set on scanner pod (see: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
   podSecurityContext:
