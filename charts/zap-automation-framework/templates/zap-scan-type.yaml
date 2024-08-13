@@ -31,7 +31,7 @@ spec:
                 - "zap.sh"
                 - "-cmd"
                 - "-autorun"
-                - "/home/securecodebox/automation.yaml"
+                - "/home/securecodebox/scb-automation/automation.yaml"
               resources:
                 {{- toYaml .Values.scanner.resources | nindent 16 }}
               securityContext:
