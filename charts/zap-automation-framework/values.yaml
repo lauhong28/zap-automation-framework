@@ -86,6 +86,7 @@ scanner:
   extraVolumeMounts:
     - mountPath: /home/securecodebox/scb-automation/automation.yaml
       name: zap-automation
+      subPath: automation.yaml
 
   # scanner.extraContainers -- Optional additional Containers started with each scanJob (see: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
   extraContainers: []
