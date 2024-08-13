@@ -89,7 +89,7 @@ scanner:
       subPath: automation.yaml
 
   # scanner.extraContainers -- Optional additional Containers started with each scanJob (see: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
-  extraContainers: []
+  extraContainers:
     - name: busybox
       command: ["sleep", "3600"]  # Keep the Pod running for 1 hour
 
