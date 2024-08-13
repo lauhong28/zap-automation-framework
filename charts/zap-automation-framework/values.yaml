@@ -17,30 +17,8 @@ parser:
   # parser.ttlSecondsAfterFinished -- seconds after which the Kubernetes job for the parser will be deleted. Requires the Kubernetes TTLAfterFinished controller: https://kubernetes.io/docs/concepts/workloads/controllers/ttlafterfinished/
   ttlSecondsAfterFinished: null
   # parser.env -- Optional environment variables mapped into each parseJob (see: https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/)
-  env:
-    contexts:
-    - name: "Default Context"
-      urls:
-        - "http://52.163.126.67/wp-login.php"
-        - "http://52.163.126.67/wp-admin/"
-      includePaths: []
-      excludePaths: []
-      authentication:
-        parameters: {}
-        verification:
-          method: "response"
-          pollFrequency: 60
-          pollUnits: "requests"
-      sessionManagement:
-        method: "cookie"
-        parameters: {}
-      technology:
-        exclude: []
-  parameters:
-    failOnError: true
-    failOnWarning: false
-    progressToStdout: true
-  vars: {}
+  env: []
+
 
   # parser.scopeLimiterAliases -- Optional finding aliases to be used in the scopeLimiter.
   scopeLimiterAliases: {}
@@ -89,8 +67,30 @@ scanner:
   #       cpu: "500m"
 
   # scanner.env -- Optional environment variables mapped into each scanJob (see: https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/)
-  env: []
-  
+  env:
+    contexts:
+    - name: "Default Context"
+      urls:
+        - "http://52.163.126.67/wp-login.php"
+        - "http://52.163.126.67/wp-admin/"
+      includePaths: []
+      excludePaths: []
+      authentication:
+        parameters: {}
+        verification:
+          method: "response"
+          pollFrequency: 60
+          pollUnits: "requests"
+      sessionManagement:
+        method: "cookie"
+        parameters: {}
+      technology:
+        exclude: []
+  parameters:
+    failOnError: true
+    failOnWarning: false
+    progressToStdout: true
+  vars: {}
   # scanner.envFrom -- Optional mount environment variables from configMaps or secrets (see: https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/#configure-all-key-value-pairs-in-a-secret-as-container-environment-variables)
   envFrom: []
 
