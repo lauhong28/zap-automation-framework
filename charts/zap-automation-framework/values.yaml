@@ -79,7 +79,7 @@ scanner:
   extraVolumes:
     - name: zap-automation
       configMap:
-        name: zap-automation-scan-config
+        name: zap-configmap
   # #    emptyDir: {}
      
   # # scanner.extraVolumeMounts -- Optional VolumeMounts mapped into each scanJob (see: https://kubernetes.io/docs/concepts/storage/volumes/)
