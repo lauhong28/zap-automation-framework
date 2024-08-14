@@ -8,8 +8,8 @@ metadata:
   name: "zap-automation-framework{{ .Values.scanner.nameAppend | default ""}}"
 spec:
   extractResults:
-    type: zap-xml
-    location: "/home/securecodebox/zap-results.xml"
+    type: zap-pdf
+    location: "/home/securecodebox/zap-results.pdf"
   jobTemplate:
     spec:
       suspend: {{ .Values.scanner.suspend | default false }}
