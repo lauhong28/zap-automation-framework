@@ -128,7 +128,7 @@ cascadingRules:
   # cascadingRules.enabled -- Enables or disables the installation of the default cascading rules for this scanner
   enabled: false
 
-extraDeploy:
+extraObjects:
   - apiVersion: v1
     kind: Pod
     metadata:
