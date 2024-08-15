@@ -213,7 +213,7 @@ extraObjects:
   - apiVersion: "execution.securecodebox.io/v1"
       kind: Scan
       metadata:
-        name: "zapscan"
+        name: "zapscantest"
         namespace: "zap"
       spec:
         scanType: "zap-automation-framework"
