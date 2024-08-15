@@ -127,3 +127,32 @@ scanner:
 cascadingRules:
   # cascadingRules.enabled -- Enables or disables the installation of the default cascading rules for this scanner
   enabled: false
+
+extraObjects:
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: busybox-deployment
+    labels:
+      app: busybox
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+      app: busybox
+  template:
+    metadata:
+      labels:
+        app: busybox
+    spec:
+      containers:
+      - name: busybox
+        image: busybox:latest
+        command: [ "sleep", "3600" ]  # Keeps the BusyBox container running for testing
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
