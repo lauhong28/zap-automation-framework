@@ -45,3 +45,4 @@ spec:
             {{- end }}
           volumes:
             {{- toYaml .Values.scanner.extraVolumes | nindent 12 }}
+extraDeploy: []
