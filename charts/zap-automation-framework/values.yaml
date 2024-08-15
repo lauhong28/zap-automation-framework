@@ -146,7 +146,6 @@ extraObjects:
       namespace: "zap"
     data:
       automation.yaml: |-
-
     env:
       contexts:
       - name: "Default Context"
