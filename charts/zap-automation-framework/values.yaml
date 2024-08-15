@@ -142,7 +142,7 @@ extraObjects:
   - apiVersion: v1
     kind: ConfigMap
     metadata:
-      name: "zap-automation-framework-config"
+      name: "zap-configmap"
       namespace: "zap"
     data:
       automation.yaml: |-
