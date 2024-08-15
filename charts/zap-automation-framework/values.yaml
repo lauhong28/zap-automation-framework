@@ -213,4 +213,13 @@ extraObjects:
 
 
 
-
+  - apiVersion: "execution.securecodebox.io/v1"
+      kind: Scan
+      metadata:
+        name: "zapscan"
+        namespace: "zap"
+      spec:
+        scanType: "zap-automation-framework"
+        parameters:
+          - "-autorun"
+          - "/home/securecodebox/scb-automation/automation.yaml"
