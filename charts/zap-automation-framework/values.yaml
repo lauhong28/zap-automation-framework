@@ -210,9 +210,6 @@ extraObjects:
           sites: []
             name: "report"
             type: "report"
-
-
-
   - apiVersion: "execution.securecodebox.io/v1"
       kind: Scan
       metadata:
