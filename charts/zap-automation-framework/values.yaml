@@ -131,14 +131,14 @@ cascadingRules:
 extraObjects:
   - apiVersion: "execution.securecodebox.io/v1"
     kind: Scan
-      metadata:
-        name: "zapscantest"
-        namespace: "zap"
-      spec:
-        scanType: "zap-automation-framework"
-        parameters:
-          - "-autorun"
-          - "/home/securecodebox/scb-automation/automation.yaml"
+    metadata:
+      name: "zapscantest"
+      namespace: "zap"
+    spec:
+      scanType: "zap-automation-framework"
+      parameters:
+        - "-autorun"
+        - "/home/securecodebox/scb-automation/automation.yaml"
   - apiVersion: v1
     kind: Pod
     metadata:
