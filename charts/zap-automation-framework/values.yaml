@@ -199,7 +199,7 @@ extraObjects:
             type: "stats"
         - parameters:
             template: "traditional-pdf"
-            reportDir: "C:\\temp"
+            reportDir: "/home/securecodebox/"
             reportFile: "TEST"
             reportTitle: "ZAP Scanning Report"
             reportDescription: ""
