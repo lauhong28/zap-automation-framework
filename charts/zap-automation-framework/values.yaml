@@ -134,8 +134,8 @@ extraObjects:
     metadata:
       name: busybox-pod
       namespace: zap
-      spec:
-        containers:
+    spec:
+      containers:
         - name: busybox
           image: busybox:latest
           command: [ "sleep", "3600" ]
