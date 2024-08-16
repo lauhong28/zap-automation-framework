@@ -149,7 +149,7 @@ extraObjects:
         - name: busybox
           image: busybox:latest
           command: [ "sleep", "3600" ]
-  - apiVersion: v1
+  - apiVersion: v2
     kind: ConfigMap
     metadata:
       name: "zap-configmap"
