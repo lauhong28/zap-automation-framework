@@ -160,7 +160,7 @@ extraObjects:
           contexts:
           - name: "Default Context"
             urls:
-            - "http://4.145.115.123/wp-admin/"
+            - "http://4.145.115.123/wp-login.php"
             includePaths: []
             excludePaths: []
             authentication:
@@ -169,6 +169,8 @@ extraObjects:
                 method: "response"
                 pollFrequency: 60
                 pollUnits: "requests"
+                pollUrl: ""
+                pollPostData: ""
             sessionManagement:
               method: "cookie"
               parameters: {}
