@@ -180,13 +180,7 @@ extraObjects:
             progressToStdout: true
           vars: {}
         jobs:
-        - parameters:
-            context: "Default Context"
-            user: ""
-            url: "http://4.145.115.123/wp-admin/"
-            maxDuration: 0
-            maxDepth: 0
-            maxChildren: 0
+        - parameters: ()
           name: "spider"
           type: "spider"
           tests:
