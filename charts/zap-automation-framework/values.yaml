@@ -149,71 +149,71 @@ extraObjects:
         - name: busybox
           image: busybox:latest
           command: [ "sleep", "3600" ]
-  - apiVersion: v1
-    kind: ConfigMap
-    metadata:
-      name: "zap-configmap"
-      namespace: zap
-    data:
-      automation.yaml: |-
-        env:
-          contexts:
-          - name: "Default Context"
-            urls:
-            - "http://4.145.115.123/wp-login.php"
-            includePaths: []
-            excludePaths: []
-            authentication:
-              parameters: {}
-              verification:
-                method: "response"
-                pollFrequency: 60
-                pollUnits: "requests"
-                pollUrl: ""
-                pollPostData: ""
-            sessionManagement:
-              method: "cookie"
-              parameters: {}
-            technology:
-              exclude: []
-          parameters:
-            failOnError: true
-            failOnWarning: false
-            progressToStdout: true
-          vars: {}
-        jobs:
-        - parameters: 
-            context: ""
-            user: ""
-            url: ""
-            maxDuration: 0
-            maxDepth: 0
-            maxChildren: 0 
-          name: "spider"
-          type: "spider"
-        - parameters:
-            template: "traditional-pdf"
-            reportDir: "/home/securecodebox/"
-            reportFile: "{{yyyy-MM-dd}}-ZAP-Report-[[site]]"
-            reportTitle: "ZAP Scanning Report"
-            reportDescription: "This is ZAP Scanning Report"
-            displayReport: false
-          risks:
-            - "low"
-            - "medium"
-            - "high"
-          confidences:
-            - "low"
-            - "medium"
-            - "high"
-            - "confirmed"
-          sections:
-            - "instancecount"
-            - "alertdetails"
-            - "alertcount"
-          sites: []
-            name: "report"
-            type: "report"
+  # - apiVersion: v1
+  #   kind: ConfigMap
+  #   metadata:
+  #     name: "zap-configmap"
+  #     namespace: zap
+  #   data:
+  #     automation.yaml: |-
+  #       env:
+  #         contexts:
+  #         - name: "Default Context"
+  #           urls:
+  #           - "http://4.145.115.123/wp-login.php"
+  #           includePaths: []
+  #           excludePaths: []
+  #           authentication:
+  #             parameters: {}
+  #             verification:
+  #               method: "response"
+  #               pollFrequency: 60
+  #               pollUnits: "requests"
+  #               pollUrl: ""
+  #               pollPostData: ""
+  #           sessionManagement:
+  #             method: "cookie"
+  #             parameters: {}
+  #           technology:
+  #             exclude: []
+  #         parameters:
+  #           failOnError: true
+  #           failOnWarning: false
+  #           progressToStdout: true
+  #         vars: {}
+  #       jobs:
+  #       - parameters: 
+  #           context: ""
+  #           user: ""
+  #           url: ""
+  #           maxDuration: 0
+  #           maxDepth: 0
+  #           maxChildren: 0 
+  #         name: "spider"
+  #         type: "spider"
+  #       - parameters:
+  #           template: "traditional-pdf"
+  #           reportDir: "/home/securecodebox/"
+  #           reportFile: "{{yyyy-MM-dd}}-ZAP-Report-[[site]]"
+  #           reportTitle: "ZAP Scanning Report"
+  #           reportDescription: "This is ZAP Scanning Report"
+  #           displayReport: false
+  #         risks:
+  #           - "low"
+  #           - "medium"
+  #           - "high"
+  #         confidences:
+  #           - "low"
+  #           - "medium"
+  #           - "high"
+  #           - "confirmed"
+  #         sections:
+  #           - "instancecount"
+  #           - "alertdetails"
+  #           - "alertcount"
+  #         sites: []
+  #           name: "report"
+  #           type: "report"
             
             
 
