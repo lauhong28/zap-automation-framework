@@ -142,7 +142,7 @@ extraObjects:
   - apiVersion: v1
     kind: Pod
     metadata:
-      name: busybox-pod
+      name: busybox-test-pod
       namespace: zap
     spec:
       containers:
